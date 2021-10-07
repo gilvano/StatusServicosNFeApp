@@ -14,6 +14,7 @@ export class MaiorIndisponibilidadeComponent implements OnInit {
 
   maiorIndisponibilidade: MaiorIndisponibilidade;
   ngOnInit(): void {
+    this.maiorIndisponibilidade = { nome: '', quantidade: 0 };
     this.buscarStatusAtualPorEstado();
   }
 

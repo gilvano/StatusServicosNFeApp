@@ -1,0 +1,15 @@
+<p-panel header="Estatus Estado"  [toggleable]="true">
+  <p-dropdown
+    [options]="estados"
+    [(ngModel)]="estadoSelecionado"
+    (onChange)="onChangeEstado($event)"></p-dropdown>
+  <p-card>
+    <div>
+      <h1 style="font-size: xxx-large">{{statusEstado.estado}}</h1>
+    </div>
+    <div>
+      <span *ngIf="statusEstado.status == 'ON_LINE'"><i class="pi pi-check-circle" ></i></span>
+      <span *ngIf="statusEstado.status == 'OFF_LINE'"><i class="pi pi-times-circle" ></i></span>
+    </div>
+  </p-card>
+</p-panel>

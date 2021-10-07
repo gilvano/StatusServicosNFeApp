@@ -8,7 +8,8 @@ import {MaiorIndisponibilidade} from "../model/maior-indisponibilidade";
 @Injectable()
 export class StatusNfeService {
   urlStatusAtualPorEstado = 'http://localhost:8080/api/statusservico/statusatual';
-  urlMaiorIndisponibilidade = 'http://localhost:8080/api/statusservico/autoriazadormaiorindisponibilidade'
+  urlMaiorIndisponibilidade = 'http://localhost:8080/api/statusservico/autoriazadormaiorindisponibilidade';
+  urlStatusEstado = 'http://localhost:8080/api/statusservico/statusatualestado/';
 
 
   constructor(private http: HttpClient) { }
@@ -19,12 +20,18 @@ export class StatusNfeService {
                             retry(2),
                             catchError(this.handleError)
                           );
-
-
   }
 
   buscarEstadoComMaiorIndisponibilidade(): Observable<MaiorIndisponibilidade>{
     return this.http.get<MaiorIndisponibilidade>(`${this.urlMaiorIndisponibilidade}`)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      );
+  }
+
+  buscarStatusEstado(estado: string): Observable<StatusEstado> {
+    return this.http.get<StatusEstado>(this.urlStatusEstado + estado)
       .pipe(
         retry(2),
         catchError(this.handleError)

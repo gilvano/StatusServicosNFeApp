@@ -12,13 +12,17 @@ import {PanelModule} from "primeng/panel";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { MaiorIndisponibilidadeComponent } from './components/maior-indisponibilidade/maior-indisponibilidade.component';
 import {CardModule} from "primeng/card";
+import { StatusEstadoComponent } from './components/status-estado/status-estado.component';
+import {DropdownModule} from "primeng/dropdown";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     StatusPorEstadoComponent,
     StatusPanelComponent,
-    MaiorIndisponibilidadeComponent
+    MaiorIndisponibilidadeComponent,
+    StatusEstadoComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ import {CardModule} from "primeng/card";
     HttpClientModule,
     TableModule,
     PanelModule,
-    CardModule
+    CardModule,
+    DropdownModule,
+    FormsModule
   ],
   providers: [StatusNfeService],
   bootstrap: [AppComponent]
