@@ -8,7 +8,10 @@
   <ng-template pTemplate="body" let-ste>
     <tr>
       <td>{{ste.estado}}</td>
-      <td>{{ste.status}}</td>
+      <td>
+        <span *ngIf="ste.status == 'ON_LINE'"><i class="pi pi-check-circle" ></i></span>
+        <span *ngIf="ste.status == 'OFF_LINE'"><i class="pi pi-times-circle" ></i></span>
+      </td>
     </tr>
   </ng-template>
 </p-table>

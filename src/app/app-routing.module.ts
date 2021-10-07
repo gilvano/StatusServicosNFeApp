@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {StatusPorEstadoComponent} from "./components/status-por-estado/status-por-estado.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {StatusPanelComponent} from "./components/status-panel/status-panel.component";
 
 const routes: Routes = [
-  { path:'', component: StatusPorEstadoComponent},
+  { path:'', component: StatusPanelComponent},
 ];
 
 
