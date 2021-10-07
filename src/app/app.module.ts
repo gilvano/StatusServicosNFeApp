@@ -10,12 +10,15 @@ import {HttpClientModule} from "@angular/common/http";
 import {StatusPanelComponent} from './components/status-panel/status-panel.component';
 import {PanelModule} from "primeng/panel";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { MaiorIndisponibilidadeComponent } from './components/maior-indisponibilidade/maior-indisponibilidade.component';
+import {CardModule} from "primeng/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     StatusPorEstadoComponent,
-    StatusPanelComponent
+    StatusPanelComponent,
+    MaiorIndisponibilidadeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     AppRoutingModule,
     HttpClientModule,
     TableModule,
-    PanelModule
+    PanelModule,
+    CardModule
   ],
   providers: [StatusNfeService],
   bootstrap: [AppComponent]

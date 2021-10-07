@@ -18,9 +18,9 @@ export class StatusPorEstadoComponent implements OnInit {
   }
 
   buscarStatusAtualPorEstado(){
-    this.statusNfeService.buscarStatusAtualPorEstado().subscribe(data => {this.statusEstados = data});
-    //this.statusEstados = this.statusNfeService.buscarStatusAtualPorEstado();
-    //return this.statusNfeService.buscarStatusAtualPorEstado();
+    this.statusNfeService.buscarStatusAtualPorEstado().subscribe(data => {
+      this.statusEstados = data
+    });
   }
 
 }
