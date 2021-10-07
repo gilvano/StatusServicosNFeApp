@@ -8,6 +8,8 @@ import {TableModule} from "primeng/table";
 import {StatusNfeService} from "./service/status-nfe.service";
 import {HttpClientModule} from "@angular/common/http";
 import {StatusPanelComponent} from './components/status-panel/status-panel.component';
+import {PanelModule} from "primeng/panel";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import {StatusPanelComponent} from './components/status-panel/status-panel.compo
     StatusPorEstadoComponent,
     StatusPanelComponent
   ],
-    imports: [
-      BrowserModule,
-      AppRoutingModule,
-      HttpClientModule,
-      TableModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    TableModule,
+    PanelModule
+  ],
   providers: [StatusNfeService],
   bootstrap: [AppComponent]
 })
