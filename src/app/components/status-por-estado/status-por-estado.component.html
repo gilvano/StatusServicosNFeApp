@@ -1,0 +1,14 @@
+<p-table [value]="statusEstados">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Estado</th>
+      <th>Status</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-ste>
+    <tr>
+      <td>{{ste.estado}}</td>
+      <td>{{ste.status}}</td>
+    </tr>
+  </ng-template>
+</p-table>
